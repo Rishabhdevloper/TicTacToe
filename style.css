@@ -1,0 +1,97 @@
+*{
+    box-sizing: border-box;
+    overflow-y: 0;
+    overflow-x: 0;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --cell-size: 100px;
+    --mark-size: cal(var(--cell-size) * .9);
+}
+
+body{
+    height: 100vh;
+    background: linear-gradient(aliceblue, #ff5555
+    );
+}
+
+/*header*/
+
+.selector{
+    display: grid;
+    color: rgb(255, 85, 85);
+    width: 100vw;
+    height: 10vh;
+    align-items: center;
+    justify-content: center;
+    font-weight: 100;
+}
+
+.selector h3{
+    background-color: hsla(0, 0%, 100%, 0.100);
+    padding: 0.4rem;
+    border: 2px solid rgba(255, 85, 85);
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
+
+/*main game*/
+
+.board{
+    width: 100vw;
+    height: 80vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3, auto);
+    
+}
+
+.cell{
+    width: var(--cell-size);
+    height: var(--cell-size);
+    background-color: hsla(92, 100%, 79%, 0.092);
+    border: 2px solid hsla(0, 0%, 100%, 0.400);
+    border-radius: 10px;
+    margin: 1px;
+    font-size: 4rem;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.green{
+    background-color: hsla(125, 100%, 66%, 0.36);
+}
+
+/*reload button*/
+
+.newGame {
+    display: flex;
+    height: 10vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.newGame h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    background: hsla(0, 0%, 0%, 0.100);
+    color: rgb(255, 255, 255);
+    padding: 0.5em;
+    font-size: 1.5rem;
+    width: 20vw;
+}
+
+.newGame h3:hover {
+    background: rgba(255, 0, 0, 0);
+    color: #000000;
+}
